@@ -1,0 +1,6 @@
+.terraform
+terraform.tfstate
+#terraform.tfvars
+terraform/azure/.terraform.tfstate.lock.info
+terraform/azure/terraform.tfstate.backup
+terraform/azure/terraform.tfvars
