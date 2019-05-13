@@ -18,5 +18,4 @@ else
     sudo chown $(id -u -n) /etc/sawtooth/validator.toml
 fi
 
-echo "Starting sawtooth services"
-sudo systemctl start sawtooth-validator.service sawtooth-settings-tp.service sawtooth-rest-api.service sawtooth-pbft-engine.service sawtooth-xo-tp-go.service
+echo "Sawtooth installation completed!!!"
