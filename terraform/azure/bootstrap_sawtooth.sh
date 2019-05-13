@@ -8,7 +8,7 @@ else
     sudo add-apt-repository 'deb [arch=amd64] http://repo.sawtooth.me/ubuntu/bumper/stable xenial universe'
     sudo apt-get update
     # Install sawtooth
-    sudo apt install -y sawtooth sawtooth-pbft-engine sawtooth-xo-tp-go python3-sawtooth-xo
+    sudo apt install -y sawtooth sawtooth-xo-tp-go python3-sawtooth-xo
     #Generate Keys
     sudo sawadm keygen
     sawtooth keygen
