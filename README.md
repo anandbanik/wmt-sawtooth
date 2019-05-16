@@ -51,7 +51,7 @@ cp /etc/sawtooth/keys/validator.pub ~/$(hostname).pub
 
 2. Create the genesis config with the below command.
 ```bash
-sawset genesis --key /etc/sawtooth/keys/validator.priv -o config-genesis.batch
+sudo sawset genesis --key /etc/sawtooth/keys/validator.priv -o config-genesis.batch
 ```
 
 3. Create the genesis block with the below command.
@@ -60,11 +60,16 @@ sudo sawset proposal create -k /etc/sawtooth/keys/validator.priv \
 sawtooth.consensus.algorithm.name=pbft \
 sawtooth.consensus.algorithm.version=0.1 \
 sawtooth.consensus.pbft.peers=['"'$(paste ~/*.pub -d , | sed s/,/\",\"/g)'"'] \
-sawtooth.consensus.pbft.view_change_timeout=4000 \
+sawtooth.consensus.pbft.view_change_timeout=10000 \
 sawtooth.consensus.pbft.message_timeout=10 \
 sawtooth.consensus.pbft.max_log_size=1000 \
-sawtooth.swa.administrators=$(cat ~/.sawtooth/keys/sawtooth.pub) \
 -o config.batch
+```
+
+Note: For running Sabre contracts, add the below.
+```bash
+sudo sawset proposal create -k /etc/sawtooth/keys/validator.priv \
+sawtooth.swa.administrators=$(cat ~/.sawtooth/keys/sawtooth.pub)
 ```
 
 4. Create the genesis block

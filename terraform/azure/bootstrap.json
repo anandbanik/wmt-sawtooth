@@ -1,4 +1,4 @@
 {   
-    "fileUris": [ "https://raw.githubusercontent.com/Cargill/rzr-ops/master/terraform/azure/bootstrap_sawtooth.sh?token=AENFUDEV4LG3BWG6HD77T4243VSQC" ],
+    "fileUris": [ "https://raw.githubusercontent.com/anandbanik/wmt-sawtooth/master/terraform/azure/bootstrap_sawtooth.sh" ],
     "commandToExecute": "bash bootstrap_sawtooth.sh"
 }
