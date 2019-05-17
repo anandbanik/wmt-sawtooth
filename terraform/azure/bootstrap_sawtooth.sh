@@ -16,7 +16,7 @@ else
     #TODO: Configure sawtooth 
     sudo cp /etc/sawtooth/validator.toml.example /etc/sawtooth/validator.toml
     sudo chown sawtooth /etc/sawtooth/validator.toml
-    cp /etc/sawtooth/keys/validator.pub ~/$(hostname).pub
+    sudo cp /etc/sawtooth/keys/validator.pub ~/$(hostname).pub
 fi
 
 echo "Sawtooth Installation complete"
